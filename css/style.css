@@ -1,0 +1,194 @@
+:root {
+  --rosaClaro: #f5cebe;
+}
+
+* {
+  font-family: "Acme", sans-serif;
+}
+
+nav {
+  background-color: #325288;
+}
+
+nav svg {
+  width: 3.9em;
+  color: white;
+}
+
+div .cantidad {
+  display: flex;
+  align-self: flex-end;
+  padding-right: 1.39rem;
+  padding-top: 1rem;
+  text-shadow: rgba(19, 18, 18, 0.8) 0.1rem 0.18rem;
+}
+
+body {
+  background-color: var(--rosaClaro);
+}
+
+.navbar-nav li a:hover {
+  text-shadow: var(--rosaClaro) 0.1rem 0.15rem;
+  border-radius: 25% 10%;
+  background-color: black;
+  
+}
+
+footer {
+  background-color: #114e60;
+}
+
+.imagenFondo {
+  background-image: url(../img/perro-gato-mas.jfif);
+  background-position: 50% 10%;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+  min-height: 40vh;
+}
+
+.imagenFondoBajo {
+  background-image: url(../img/perro-gato-mas.jfif);
+  background-position: bottom;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+  min-height: 52vh;
+}
+
+.imagenFondoPharmacy {
+  /* background-image: url(../img/cachorro-de-perro-blanco-y-marron-aoscultado-por-veterinaria.jpg); */
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+  min-height: 70vh;
+  background-image: linear-gradient(rgba(60, 60, 60, 0.5), rgba(60, 60, 60, 1)),
+    url(../img/cachorro-de-perro-blanco-y-marron-aoscultado-por-veterinaria.jpg);
+}
+
+.imagenFondoToys {
+  /* background-image: url(../img/cachorro-de-perro-blanco-y-marron-aoscultado-por-veterinaria.jpg); */
+  background-position: 50% 40%;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+  min-height: 70vh;
+  background-image: linear-gradient(rgba(60, 60, 60, 0.2), rgba(60, 60, 60, 2)),
+    url(../img/toys.jpg);
+}
+
+svg {
+  width: 3em;
+  padding: 0.5em;
+}
+
+.altText {
+  height: 1.5em;
+  margin:1em;
+  /* background-color: chartreuse; */
+}
+
+.altImg {
+  height: 14em;
+  display: block;
+}
+
+.altDesc {
+   height: 14em; 
+  display: none;
+}
+
+.cursor{
+  cursor: pointer;
+}
+
+.imagenFondoToys h1,
+.imagenFondoPharmacy h1 {
+  font-size: 10vw;
+  text-shadow: rgba(245, 206, 190, 0.5) 0.2rem 0.15rem;
+}
+
+#toastGreen {
+  visibility: hidden;
+  min-width: 12.5rem;
+   margin-left: -125px;
+  background-color: rgb(0, 204, 0);
+  border-radius: 1rem;
+  position: fixed;
+  z-index: 1;
+  left: 50%;
+  bottom: 2rem;
+}
+
+#toastRed {
+    visibility: hidden;
+    min-width: 12.5rem;
+     margin-left: -125px;
+    background-color: rgb(233, 29, 29);
+    border-radius: 1rem;
+    position: fixed;
+    z-index: 1;
+    left: 50%;
+    bottom: 2rem;
+  }
+  
+#toastGreen.show,#toastRed.show {
+  visibility: visible;
+  -webkit-animation: fadein 0.5s, fadeout 0.5s 2.5s;
+  animation: fadein 0.5s, fadeout 0.5s 2.5s;
+}
+
+@-webkit-keyframes fadein {
+  from {
+    bottom: 0;
+    opacity: 0;
+  }
+
+  to {
+    bottom: 30px;
+    opacity: 1;
+  }
+}
+
+@keyframes fadein {
+  from {
+    bottom: 0;
+    opacity: 0;
+  }
+
+  to {
+    bottom: 30px;
+    opacity: 1;
+  }
+}
+
+@-webkit-keyframes fadeout {
+  from {
+    bottom: 30px;
+    opacity: 1;
+  }
+
+  to {
+    bottom: 0;
+    opacity: 0;
+  }
+}
+
+@keyframes fadeout {
+  from {
+    bottom: 30px;
+    opacity: 1;
+  }
+
+  to {
+    bottom: 0;
+    opacity: 0;
+  }
+}
+
+@media screen and (max-width: 769px) {
+  div img {
+    display: none;
+  }
+}
